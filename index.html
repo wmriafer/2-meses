@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feliz 2 Meses de Amor 💙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="particles-container" id="particles-js"></div>
+  
+  <header class="header">
+    <div class="contador">
+      <span id="dias-juntos">60</span> dias
+      <span id="horas-juntos">00</span> horas
+      <span id="minutos-juntos">00</span> minutos
+      <span id="segundos-juntos">00</span> segundos
+      <div class="subtitulo">juntos e te amando cada segundo mais</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1 class="titulo-principal animate__animated animate__heartBeat">Feliz 2 Meses de Amor</h1>
+    <div class="subtitulo-principal">Cada momento com você é um presente que guardo no coração</div>
+    
+
+    <section class="galeria">
+      <h2 class="titulo-secao">Nossa História em Imagens</h2>
+      <div class="carrossel">
+        <div class="polaroid active" onclick="expandirFoto(this )">
+          <img src="images/MOR.jpg" alt="Nosso primeiro encontro" />
+          <div class="legenda">
+            <span class="data">Nossa primeira foto juntos</span>
+          
+          </div>
+        </div>
+        <div class="polaroid" onclick="expandirFoto(this)">
+          <img src="images/skincare.jpg" alt="Momentos divertidos" />
+          <div class="legenda">
+            <span class="data">Nossa primeira skincare juntos</span>
+          </div>
+        </div>
+        <div class="polaroid" onclick="expandirFoto(this)">
+          <img src="images/date.jpg" alt="Abraço que virou lar" />
+          <div class="legenda">
+            <span class="data">Nosso primeiro encontro</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="controles-carrossel">
+        <button class="controle-prev" onclick="moverCarrossel(-1)">❮</button>
+        <div class="indicadores">
+          <span class="indicador ativo" onclick="irParaSlide(0)"></span>
+          <span class="indicador" onclick="irParaSlide(1)"></span>
+          <span class="indicador" onclick="irParaSlide(2)"></span>
+        </div>
+        <button class="controle-next" onclick="moverCarrossel(1)">❯</button>
+      </div>
+    </section>
+
+    <section class="motivos">
+      <h2 class="titulo-secao">Motivos Para Te Amar</h2>
+      <div class="motivos-container">
+        <div class="motivo" onclick="revelarMotivo(this)">
+          <div class="motivo-frente">
+            <div class="numero">1</div>
+            <div class="icone"></div>
+          </div>
+          <div class="motivo-verso">
+            <p>Seu sorriso sempre melhora meu dia</p>
+          </div>
+        </div>
+        <div class="motivo" onclick="revelarMotivo(this)">
+          <div class="motivo-frente">
+            <div class="numero">2</div>
+            <div class="icone"></div>
+          </div>
+          <div class="motivo-verso">
+            <p>É meu melhor amigo e meu amor</p>
+          </div>
+        </div>
+        <div class="motivo" onclick="revelarMotivo(this)">
+          <div class="motivo-frente">
+            <div class="numero">3</div>
+            <div class="icone"></div>
+          </div>
+          <div class="motivo-verso">
+            <p>Você tem um coração incrível e é super carinhoso</p>
+          </div>
+        </div>
+        <div class="motivo" onclick="revelarMotivo(this)">
+          <div class="motivo-frente">
+            <div class="numero">4</div>
+            <div class="icone"></div>
+          </div>
+          <div class="motivo-verso">
+            <p>Sempre me apoia</p>
+          </div>
+        </div>
+        <div class="motivo" onclick="revelarMotivo(this)">
+          <div class="motivo-frente">
+            <div class="numero">5</div>
+            <div class="icone"></div>
+          </div>
+          <div class="motivo-verso">
+            <p>Me faz sentir amada e especial sempre</p>
+          </div>
+        </div>
+        <div class="motivo" onclick="revelarMotivo(this)">
+          <div class="motivo-frente">
+            <div class="numero">6</div>
+            <div class="icone"></div>
+          </div>
+          <div class="motivo-verso">
+            <p>A forma como você cuida de mim</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="envelope-section">
+      <h2 class="titulo-secao">Uma Carta Para Você</h2>
+      <p class="instrucao">Clique no envelope para abrir</p>
+      
+      <div class="envelope-container">
+        <div class="envelope" id="envelope" onclick="abrirEnvelope()">
+          <div class="envelope-frente">
+            <div class="envelope-aba"></div>
+            <div class="envelope-corpo">
+              <div class="envelope-brilho"></div>
+              <div class="selo">💌</div>
+            </div>
+          </div>
+          <div class="envelope-tras"></div>
+        </div>
+        
+        <div class="carta" id="carta">
+          <div class="carta-conteudo">
+            <h3>Meu Amor,</h3>
+            <div class="texto-carta" id="texto-carta"></div>
+            <div class="assinatura">Com todo meu amor,</div>
+            <div class="nome-assinatura">❤️ Seu amor ❤️</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="momentos-especiais">
+      <h2 class="titulo-secao">Momentos Especiais</h2>
+      <div class="timeline">
+        <div class="momento">
+          <div class="data-momento">Primeiro dia</div>
+          <div class="conteudo-momento">
+            <p>O dia em que nossos caminhos se cruzaram e nossas vidas mudaram para sempre.</p>
+          </div>
+        </div>
+        <div class="momento">
+          <div class="data-momento">Primeira mensagem</div>
+          <div class="conteudo-momento">
+            <p>Quando as palavras começaram a construir nossa história.</p>
+          </div>
+        </div>
+        <div class="momento">
+          <div class="data-momento">Primeiro encontro</div>
+          <div class="conteudo-momento">
+            <p>O nervosismo, a ansiedade e a certeza de que algo especial estava começando.</p>
+          </div>
+        </div>
+        <div class="momento">
+          <div class="data-momento">Primeiro beijo</div>
+          <div class="conteudo-momento">
+            <p>O momento que fez a gente se sentir ainda mais perto.</p>
+          </div>
+        </div>
+        <div class="momento">
+          <div class="data-momento">Hoje: 2 meses</div>
+          <div class="conteudo-momento">
+            <p>Celebrando cada segundo juntos e ansiosos por todos os momentos que ainda viveremos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="musicas-section">
+      <h2 class="titulo-secao">Nossas Músicas Especiais</h2>
+      <div class="musicas-container">
+        <div class="musica-card" data-id="musica1" data-src="HR4ZxjGQGYY_160.mp3">
+          <img src="images/MUSICA.jpeg" alt="Duas Metades" class="musica-capa">
+          <div class="musica-info">
+            <div class="musica-titulo">Duas Metades</div>
+            <div class="musica-artista">Jorge & Mateus</div>
+          </div>
+          <div class="musica-controles">
+            <button class="musica-btn play-btn" onclick="tocarMusica('musica1' )">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="volume-container">
+              <button class="musica-btn">
+                <i class="fas fa-volume-up"></i>
+              </button>
+              <div class="volume-slider">
+                <input type="range" min="0" max="1" step="0.1" value="0.5" onchange="ajustarVolume(this.value)">
+              </div>
+            </div>
+          </div>
+          <div class="ondas-audio">
+            <div class="onda"></div>
+            <div class="onda"></div>
+            <div class="onda"></div>
+            <div class="onda"></div>
+            <div class="onda"></div>
+          </div>
+        </div>
+        
+       
+          
+    </section>
+    
+    <section class="mensagem-final">
+      <div class="coracao-botao" id="coracao-botao" onclick="explodir()">
+        <span>Clique Aqui</span>
+      </div>
+      <div class="mensagem-surpresa" id="mensagem-surpresa">
+        <h3>Eu Te Amo Infinitamente!</h3>
+        <p>Obrigado por fazer parte da minha vida e por me fazer tão feliz a cada dia.</p>
+        <p>Que venham muitos meses, anos e uma vida inteira juntos!</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-texto">Feito com muito amor para você 💙</div>
+    <div class="data-comemorativa">2 meses de amor • <span id="data-atual"></span></div>
+  </footer>
+
+  <!-- Elemento de áudio para reprodução das músicas -->
+  <audio id="audio-player"></audio>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js"></script>
+</body>
+</html>
